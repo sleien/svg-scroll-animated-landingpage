@@ -1,12 +1,17 @@
 let bg = document.querySelector("#bg");
+let hint = document.querySelector("#hint");
 let multiplier;
-if(screen.height < "1200px"){
+if (screen.height < "1200px") {
     multiplier = 2;
-}else{
+} else {
     multiplier = 6;
 }
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function() {
     let value = window.scrollY;
-    bg.style.backgroundSize = 100 + value*multiplier + "px";
+    if (value > 0) {
+        hint.style.display = "none";
+    } else {
+        hint.style.display = "block";
+    }
+    bg.style.backgroundSize = 100 + value * multiplier + "px";
 })
-
