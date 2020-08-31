@@ -41,6 +41,10 @@ body{
     padding: 100px;
 }
 
+.content div{
+    padding-top:20px;
+}
+
 h2{
     padding-top: 10px;
 }
